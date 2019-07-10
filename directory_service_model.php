@@ -70,7 +70,6 @@ class Directory_service_model extends \Model
      **/
     public function get_modified_computernames()
     {
-        $machine = new Machine_model();
         $filter = get_machine_group_filter('AND');
         $trim = $this->trim('computeraccount', '$');
         $sql = "SELECT reportdata.serial_number, computeraccount, computer_name
